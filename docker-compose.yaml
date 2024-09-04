@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  tensorflow:
+    image: tensorflow/tensorflow:latest-gpu
+    volumes:
+      - .:/workspace
+    ports:
+      - "8888:8888"
+    working_dir: /workspace
+    tty: true
+    command: bash
